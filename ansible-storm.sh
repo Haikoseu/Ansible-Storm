@@ -37,4 +37,4 @@ do
 	fi
 done
 
-ansible all -i ./hosts -u $user -m apt -a "upgrade=yes update_cache=yes cache_valid_time=86400" -B -K
+ansible all -i ./hosts -u $user -m apt -a "upgrade=yes update_cache=yes cache_valid_time=86400" --become --ask-become-pass
